@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Gift For Her</title>
+   <style>
+    /* =====================
+   Global Styling
+======================== */
+body {
+    background-color: #121212;
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+}
+/* Navbar dark theme */
+.navbar {
+  background-color: #1c1c1c !important;
+  border-bottom: 1px solid #333;
+}
+
+.navbar .navbar-brand img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.navbar-nav .nav-link {
+  color: #eee !important;
+  margin-right: 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00bcd4 !important;
+    text-decoration: underline;
+}
+.hero.background-section {
+    background-image: url('../crystal\ gift\ bg-img.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 10px;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    color: black;
+    font-weight: bold;
+}
+.hero p {
+    font-size: 1.3rem;
+    color: black;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* =====================
+   Cards
+======================== */
+.card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.6);
+}
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+.card-title {
+    font-size: 1.3rem;
+    color: #00bcd4;
+}
+.card-text {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+.btn-buy {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 24px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn-buy:hover {
+    background-color: #0097a7;
+}
+
+/* =====================
+   Sections
+======================== */
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #00bcd4;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.backgrounded-section {
+    background-image: url('../why\ choose2.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    border-radius: 15px;
+    margin-top: 40px;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.2);
+}
+.gift-wrapping-section{
+    background-image: url('../gift\ wrapping\ and\ delievery.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    border-radius: 15px;
+    margin-top: 40px;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.2);
+}
+.backgrounded-section p {
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* =====================
+   Testimonials
+======================== */
+.extra-section {
+    background-image: url('../customer2.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    border-radius: 15px;
+    margin-top: 40px;
+    box-shadow: 0 0 10px rgba(1, 21, 24, 0.2);
+}
+blockquote {
+    font-style: italic;
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* =====================
+   Contact Form
+======================== */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0, 188, 212, 0.2);
+}
+form .form-label {
+    color: #00bcd4;
+    font-weight: 500;
+}
+form .form-control {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #555;
+    margin-bottom: 15px;
+}
+form .form-control:focus {
+    background-color: #333;
+    border-color: #00bcd4;
+    color: #fff;
+    box-shadow: none;
+}
+
+/* =====================
+   Footer
+======================== */
+footer {
+    background-color: #111;
+    padding: 40px 20px;
+    margin-top: 60px;
+    box-shadow: 0 -2px 10px rgba(0, 188, 212, 0.1);
+}
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer-links div {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+.footer-links h5 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-links ul li {
+    margin-bottom: 8px;
+    color: #bbb;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.footer-links ul li:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+footer p {
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* =====================
+   Responsive
+======================== */
+@media (max-width: 767px) {
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    .card-img-top {
+        height: 180px;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+   </style>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../1.png" alt="Logo" height="100px" width="100px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../specialoffers.html">Special Offers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="palmstones.html">Palm Stones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="jewellery.html">Jewelry</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tumbledstones.html">Tumbled Stones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="newarrival.html">New Arrivals</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../skincare products.html">SkinCare Product</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../contactpage.html">Contact Us</a>
+                </li>
+    
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <body>
+        <div class="overlay">
+            <section class="hero background-section">
+                <h1>Crystal Gifts For Her</h1>
+                <p>Discover elegant, meaningful, and sparkly gifts she'll cherish forever</p>
+            </section>
+            <div class="container">
+                <div class="row g-4">
+                <h2 class="section-title">Featured Gifts</h2>
+                <div class="row row-cols-1 row-colsmd-3 g-4">
+                    <!-- Card-1 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card">
+                            <img src="../crystal heart necklace gift.webp" class="card-img-top"
+                                alt="crystal heart necklace">
+                            <div class="card-body">
+                                <h5 class="card-title">Crystal Heart Necklace</h5>
+                                <p class="card-text">A symbol of love, elegance and timeless beauty.</p>
+                                <button class="btn btn-buy">Buy Now</button>
+                                <p class="mt-2 fw-bold">PKR 2,499</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card-2 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card">
+                            <img src="../rose quartz gift.jpg" class="card-img-top" alt="rose quartz bracelet">
+                            <div class="card-body">
+                                <h5 class="card-title">Rose Quartz Bracelet</h5>
+                                <p class="card-text">Embrace feminine energy and healing with style.</p>
+                                <button class="btn btn-buy">Buy Now</button>
+                                <p class="mt-2 fw-bold">PKR 1,500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card-3 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card">
+                            <img src="../amethyst earring gift.jpg" class="card-img-top" alt="amethyst earrings">
+                            <div class="card-body">
+                                <h5 class="card-title">Amethyst Earrings</h5>
+                                <p class="card-text">Glamour and grace with protective energies.</p>
+                                <button class="btn btn-buy">Buy Now</button>
+                                <p class="mt-2 fw-bold">PKR 1,800</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card-4 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card">
+                            <img src="../elegant crystal ring gift.jpg" class="card-img-top" alt="elegant crystal ring">
+                            <div class="card-body">
+                                <h5 class="card-title">Elegant Crystal Ring</h5>
+                                <p class="card-text">A dazzling piece for daily wear or romantic moments.</p>
+                                <button class="btn btn-buy">Buy Now</button>
+                                <p class="mt-2 fw-bold">PKR 3,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card-5 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card">
+                            <img src="../crystal love keychain gift.webp" class="card-img-top"
+                                alt="crystal love keychain">
+                            <div class="card-body">
+                                <h5 class="card-title">Crystal Love Keychain</h5>
+                                <p class="card-text">Keep love close with this stylish crystal keychain.</p>
+                                <button class="btn btn-buy">Buy Now</button>
+                                <p class="mt-2 fw-bold">PKR 2,500</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card-6 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card">
+                            <img src="../crystal perfume bottle gift.jpg" class="card-img-top"
+                                alt="crystal perfume bottle">
+                            <div class="card-body">
+                                <h5 class="card-title">Crystal Perfume Bottle</h5>
+                                <p class="card-text">A vintage-style perfume bottle with crystal elegance.</p>
+                                <button class="btn btn-buy">Buy Now</button>
+                                <p class="mt-2 fw-bold">PKR 2,499</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="backgrounded-section mt-5">
+                        <h2 class="section-title text-white">Why Choose Crystal Gifts?</h2>
+                        <p class="text-center">Crystal gifts are not only beautiful but also carry healing and emotional
+                            energies.<br> Each piece tells a story-perfect for birthday, anniversaries or just beacuse
+                            you care.</p>
+                    </div>
+                    <div class="extra-section">
+                        <h2 class="section-title">Customer Testimonials</h2>
+                        <blackquote class="blackquote text-center">
+                            <p>"She absolutely loved the crystal pendant. The packaging, the shine, the energy-perfect!"
+                            </p>
+                            <footer class="text-center">Sara A., Islamabad</footer>
+                        </blackquote>
+                    </div>
+                    <div class="gift-wrapping-section">
+                        <h2 class="section-title text-white">Gift Wrapping & Delivery</h2>
+                        <p class="text-center"> We offer luxurious gift wrapping and worldwide delivery with a personal
+                            note option
+                            to make your surprise even more special.</p>
+                    </div>
+                        <h2 class="section-title">Contact Us</h2>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-buy">Send Message</button>
+                        </form>
+                    </div>
+                <!-- Footer-Section -->
+                <footer>
+                    <div class="footer-links">
+                        <div>
+                            <h5>Customer service</h5>
+                            <ul>
+                                <li>Shipping</li>
+                                <li>Exchanges & Returns</li>
+                                <li>Contact Us</li>
+                                <li>FAQ</li>
+                                <li>Gift Certificates</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>About Us</h5>
+                            <ul>
+                                <li>Our Story</li>
+                                <li>Environmental Impact</li>
+                                <li>Reviews</li>
+                                <li>Blog</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Resources</h5>
+                            <ul>
+                                <li>Rewards Points</li>
+                                <li>Affiliate Program</li>
+                                <li>Charging Crystals</li>
+                                <li>Trigonics Info</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5>Privacy</h5>
+                            <ul>
+                                <li>Cookie Policy</li>
+                                <li>DASR</li>
+                                <li>Do Not Sell</li>
+                                <li>Blog</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>&copy;2025 Exquisite Crystals. All rights reserved.</p>
+                </footer>
+                </section>
+                <!-- Optional JavaScript; choose one of the two! -->
+
+                <!-- Option 1: Bootstrap Bundle with Popper -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                    crossorigin="anonymous"></script>
+
+                <!-- Option 2: Separate Popper and Bootstrap JS -->
+                <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    </body>
+
+</html>

@@ -1,0 +1,259 @@
+/* General Reset */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  margin: 0px;
+  padding: 0px;
+  color: #f1f1f1;
+}
+
+/* Navbar */
+
+.navbar .navbar-brand img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.navbar-brand video {
+  border: 2px solid #fff;
+  box-shadow: 0 0 6px #ccc;
+}
+
+.navbar-nav .nav-link {
+  color: #f8f8f8 !important;
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* Hero Section */
+.hero-sec {
+  background: linear-gradient(to right, #2c2c2c, #000);
+  text-align: center;
+  padding: 80px 20px;
+  color: #fff;
+  height: 20px;
+}
+
+.hero-sec h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-sec .btn {
+  background-color: #ffc107;
+  color: #000;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+/* Carousel */
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Product Scroll Cards */
+.d-flex.flex-row {
+  padding: 30px 20px;
+  background-color: #1c1c1c;
+  gap: 20px;
+}
+
+.card {
+  border: none;
+  background-color: #2b2b2b;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* Category Section: One Line 3 Cards */
+.bg-light {
+  background-color: #1a1a1a !important;
+}
+
+.container .row.text-center {
+  margin-bottom: 30px;
+}
+
+
+.container .row.text-center .col-md-4 {
+  background-color: #2d2d2d;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  margin-bottom: 50px;
+}
+
+.container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.container h4 {
+  margin: 15px 0;
+  font-weight: bold;
+  color: #f8f8f8;
+}
+
+.btn-outline-dark {
+  color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-outline-dark:hover {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* Reviews */
+.reviews {
+  background-color: #2a2a2a;
+  color: #ddd;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.reviews h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Featured Section */
+.hero {
+  padding: 50px 20px;
+  background: linear-gradient(to right, #2b2b2b, #000);
+  text-align: center;
+  color: #fff;
+}
+
+.hero h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero button {
+  background-color: #ffc107;
+  color: #000;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.hero img {
+  max-width: 700px;
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.featured-crystals {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.featured-crystals div {
+  font-weight: bold;
+  color: #ffc107;
+  font-size: 16px;
+}
+
+.featured-crystals img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* Footer */
+footer {
+  background-color: #0f0f0f;
+  padding: 40px 20px;
+  color: #ccc;
+  margin-top: 40px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-links h5 {
+  color: #ffc107;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-links ul li:hover {
+  color: #fff;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .why-cards {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-brand img {
+    width: 90px;
+  }
+
+  .hero-sec h2 {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Palm Stones </title>
+   <style>
+    /* =====================
+   Global Styling
+======================== */
+body {
+    background-color: #121212;
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Navbar dark theme */
+.navbar {
+  background-color: #1c1c1c !important;
+  border-bottom: 1px solid #333;
+}
+
+.navbar .navbar-brand img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.navbar-nav .nav-link {
+  color: #eee !important;
+  margin-right: 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: #00bcd4 !important;
+}
+h1, h2, h3, h4, h5 {
+    color: #00bcd4;
+}
+
+/* =====================
+   Cards
+======================== */
+.card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card-title {
+    font-size: 1.25rem;
+    color: #00bcd4;
+}
+.card-text {
+    font-size: 0.95rem;
+    color: #ccc;
+}
+.btn-buy {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    transition: background-color 0.3s;
+}
+.btn-buy:hover {
+    background-color: #0097a7;
+}
+
+/* =====================
+   Sections
+======================== */
+.section-title {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+.section, .extra-section, .backgrounded-section {
+    background-color: #1e1e1e;
+    padding: 50px 20px;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+.section p, .extra-section p, .backgrounded-section p {
+    color: #e0e0e0;
+}
+
+/* =====================
+   Restrictions Notice
+======================== */
+.restrictions {
+    background-color: #222;
+    color: #ccc;
+    padding: 20px;
+    border-left: 5px solid #00bcd4;
+    margin-top: 30px;
+}
+
+/* =====================
+   Contact Form
+======================== */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+form .form-control {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #555;
+}
+form .form-control:focus {
+    background-color: #333;
+    border-color: #00bcd4;
+    color: #fff;
+    box-shadow: none;
+}
+
+/* =====================
+   Footer
+======================== */
+footer {
+    background-color: #111;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer-links div {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+.footer-links h5 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-links ul li {
+    margin-bottom: 5px;
+    color: #bbb;
+    cursor: pointer;
+}
+.footer-links ul li:hover {
+    color: #fff;
+}
+footer p {
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
+    font-size: 0.85rem;
+}
+
+/* =====================
+   Responsive
+======================== */
+@media (max-width: 767px) {
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../1.png" alt="Logo" height="100px" width="100px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about us.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../specialoffers.html">Special Offers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="palmstones.html">Palm Stones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="jewellery.html">Jewelry</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tumbledstones.html">Tumbled Stones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../newarrival.html">New Arrivals</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../skincare products.html">SkinCare Product</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../contactpage.html">Contact Us</a>
+                </li>
+    
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    
+    <div class="container">
+        <h1 class="product title">Palm Stones Collection</h1>
+        <!-- Palm Stones Cards -->
+        <div class="row g-4">
+            <!-- Card-1 -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <img src="../amethytst 2 palm stone.jpg" class="card-img-top" alt="amethyst palm stone">
+                    <div class="card-body">
+                        <h5 class="card-title">Amethyst Palm stone</h5>
+                        <p class="card-text">Soothing stone for stress and balance.</p>
+                        <p class="fw-bold text-success">Rs. 1,200</p>
+                        <a href="#" class="btn btn-buy w-100">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        <!-- Card-2 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card">
+                <img src="../rose quartz palm stone.webp" class="card-img-top" alt="rose quartz palm stone">
+                <div class="card-body">
+                    <h5 class="card-title">Rose Quartz Palm stone</h5>
+                    <p class="card-text">The stone of love and emotional healing.</p>
+                    <p class="fw-bold text-success">Rs. 950</p>
+                    <a href="#" class="btn btn-buy w-100">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    <!-- Card-3 -->
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card">
+            <img src="../black obsidian palm.webp" class="card-img-top" alt="black obsidian palm stone">
+            <div class="card-body">
+                <h5 class="card-title">Black Obsidian Palm stone</h5>
+                <p class="card-text">Strong protection and grounding energy.</p>
+                <p class="fw-bold text-success">Rs. 1,050</p>
+                <a href="#" class="btn btn-buy w-100">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Card-4 -->
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card">
+            <img src="../clear quartz palm stone.webp" class="card-img-top" alt="clear quartz palm stone">
+            <div class="card-body">
+                <h5 class="card-title">Clear Quartz Palm stone</h5>
+                <p class="card-text">Amplifies energy and boosts clarity.</p>
+                <p class="fw-bold text-success">Rs. 1,100</p>
+                <a href="#" class="btn btn-buy w-100">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Card-5 -->
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card">
+            <img src="../tiger eye palm stone.webp" class="card-img-top" alt="tiger's eye palm stone">
+            <div class="card-body">
+                <h5 class="card-title">Tiger Eye Palm stone</h5>
+                <p class="card-text">Confidence, strength, and protection.</p>
+                <p class="fw-bold text-success">Rs. 990</p>
+                <a href="#" class="btn btn-buy w-100">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Card-6 -->
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card">
+            <img src="../labradorite palm stone.webp" class="card-img-top" alt="labradorite palm stone">
+            <div class="card-body">
+                <h5 class="card-title">Labradorite Palm stone</h5>
+                <p class="card-text">Intuition and tranformation energy.</p>
+                <p class="fw-bold text-success">Rs. 1,300</p>
+                <a href="#" class="btn btn-buy w-100">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Card-7 -->
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card">
+            <img src="../green aventutrine.jfif" class="card-img-top" alt="green aventurine palm stone">
+            <div class="card-body">
+                <h5 class="card-title">Green Aventurine Palm stone</h5>
+                <p class="card-text">Stone of opportunity and luck.</p>
+                <p class="fw-bold text-success">Rs. 890</p>
+                <a href="#" class="btn btn-buy w-100">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Card-8 -->
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card">
+            <img src="../smoky quartz palm stone.jpg" class="card-img-top" alt="smoky quartz palm stone">
+            <div class="card-body">
+                <h5 class="card-title">Smoky Quartz Palm stone</h5>
+                <p class="card-text">Cleansing stone that removes negativity.</p>
+                <p class="fw-bold text-success">Rs. 980</p>
+                <a href="#" class="btn btn-buy w-100">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Card-9 -->
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card">
+            <img src="../sodalite palm stone.webp" class="card-img-top" alt="sodalite  palm stone">
+            <div class="card-body">
+                <h5 class="card-title">Sodalite Palm stone</h5>
+                <p class="card-text">Brings clarity, logic, and truth.</p>
+                <p class="fw-bold text-success">Rs. 870</p>
+                <a href="#" class="btn btn-buy w-100">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Card-10 -->
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card">
+            <img src="../carnelian palm stone.jpg" class="card-img-top" alt="carnelian palm stone">
+            <div class="card-body">
+                <h5 class="card-title">Carnelian Palm stone</h5>
+                <p class="card-text">Boosts courage and creative power.</p>
+                <p class="fw-bold text-success">Rs. 910</p>
+                <a href="#" class="btn btn-buy w-100">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Card-11 -->
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card">
+            <img src="../howlite palm stone.jfif" class="card-img-top" alt="howlite palm stone">
+            <div class="card-body">
+                <h5 class="card-title">Howlite Palm stone</h5>
+                <p class="card-text">Clams the mind and aids sleep.</p>
+                <p class="fw-bold text-success">Rs. 920</p>
+                <a href="#" class="btn btn-buy w-100">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Card-2 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card">
+                <img src="../hematite palm stone.webp" class="card-img-top" alt="hematite palm stone">
+                <div class="card-body">
+                    <h5 class="card-title">Hematite Palm stone</h5>
+                    <p class="card-text">Grounding stone that supports strength and focus.</p>
+                    <p class="fw-bold text-success">Rs. 1000</p>
+                    <a href="#" class="btn btn-buy w-100">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Restrictions Notice -->
+     <div class="restrictions mt-5 p-4 rounded">
+        <h4 class="mb-3 text-warning">⚠️ Important Note</h4>
+        <p><strong>Note:</strong> All palm stones are natural and hand-carved. Shapes, colors, and sizes may slightly vary. Keep away from children under 5. Intended for spiritual and decorative purposes only.</p>
+     </div>
+     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-links">
+            <div>
+                <h5>Customer service</h5>
+                <ul>
+                    <li>Shipping</li>
+                    <li>Exchanges & Returns</li>
+                    <li>Contact Us</li>
+                    <li>FAQ</li>
+                    <li>Gift Certificates</li>
+                </ul>
+            </div>
+            <div>
+                <h5>About Us</h5>
+                <ul>
+                    <li>Our Story</li>
+                    <li>Environmental Impact</li>
+                    <li>Reviews</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+            <div>
+                <h5>Resources</h5>
+                <ul>
+                    <li>Rewards Points</li>
+                    <li>Affiliate Program</li>
+                    <li>Charging Crystals</li>
+                    <li>Trigonics Info</li>
+                </ul>
+            </div>
+            <div>
+                <h5>Privacy</h5>
+                <ul>
+                    <li>Cookie Policy</li>
+                    <li>DASR</li>
+                    <li>Do Not Sell</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy;2025 Exquisite Crystals. All rights reserved.</p>
+    </footer>
+    </section>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+</html>

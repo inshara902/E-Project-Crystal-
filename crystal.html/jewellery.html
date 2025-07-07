@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title> Crystello Jewellery</title>
+    <style>
+        /* =====================
+   Global Styling
+======================== */
+        body {
+            background-color: #121212;
+            color: #f1f1f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar dark theme */
+        .navbar {
+            background-color: #1c1c1c !important;
+            border-bottom: 1px solid #333;
+        }
+
+        .navbar .navbar-brand img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .navbar-nav .nav-link {
+            color: #eee !important;
+            margin-right: 15px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #00ffcc !important;
+        }
+
+        .nav-link:hover {
+            color: #00bcd4 !important;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            color: #00bcd4;
+        }
+
+        /* =====================
+   Heading Styling
+======================== */
+        h1 {
+            text-align: center;
+            background-color: darkslategray;
+            background-size: cover;
+            background-position: center;
+            padding: 40px 20px;
+            margin-bottom: 60px;
+            border-radius: 12px;
+            font-size: 2.5rem;
+            color: black;
+        }
+
+        /* =====================
+   Cards Styling
+======================== */
+        .card.jewelery-card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            height: 100%;
+        }
+
+        .card.jewelery-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+        }
+
+        .card-img-top.jewelery-img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #81c784;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .btn-custom {
+            margin: 5px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-primary {
+            border-color: #00bcd4;
+            color: #00bcd4;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #00bcd4;
+            color: #fff;
+        }
+
+        .btn-primary {
+            background-color: #00bcd4;
+            border-color: #00bcd4;
+        }
+
+        .btn-primary:hover {
+            background-color: #0097a7;
+        }
+
+        /* =====================
+   Crystal Benefits Section
+======================== */
+        .crystal-benefits {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        .crystal-benefits .style {
+            width: 100%;
+            max-width: 900px;
+            padding: 30px;
+            border-radius: 12px;
+            background-color: #1e1e1e;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .crystal-benefits .style:nth-child(1) {
+            background-color: darkslategray;
+        }
+
+        .crystal-benefits .style:nth-child(2) {
+            background-color: darkslategray;
+        }
+
+        .crystal-benefits .style:nth-child(3) {
+            background-color: darkslategrey;
+        }
+
+        .crystal-benefits .style:nth-child(4) {
+            background-color: darkslategray;
+        }
+
+        .crystal-benefits h2 {
+            color: #00bcd4;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .crystal-benefits p {
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* =====================
+   Footer Styling
+======================== */
+        footer {
+            background-color: #111;
+            padding: 40px 20px;
+            margin-top: 0;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-links div {
+            flex: 1 1 200px;
+            margin: 10px;
+        }
+
+        .footer-links h5 {
+            color: #00bcd4;
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 5px;
+            color: #bbb;
+            cursor: pointer;
+        }
+
+        .footer-links ul li:hover {
+            color: #fff;
+        }
+
+        footer p {
+            text-align: center;
+            color: #777;
+            margin-top: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* =====================
+   Responsive Adjustments
+======================== */
+        @media (max-width: 767px) {
+            .footer-links {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .crystal-benefits {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+                padding: 30px 15px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../1.png" alt="Logo" height="100px" width="100px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about us.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../specialoffers.html">Special Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="palmstones.html">Palm Stones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="jewellery.html">Jewelry</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tumbledstones.html">Tumbled Stones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../newarrival.html">New Arrivals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../skincare products.html">SkinCare Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contactpage.html">Contact Us</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Jewelery Cards -->
+    <div class="container">
+        <h1> Crystello Jewelery</h1>
+        <div class="row g-5">
+
+            <!-- Card 1 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../crystal quartz.avif" class="card-img-top jewelery-img" alt="crystal quartz necklace">
+                    <h5 class="card-title">Crystal Quartz Necklace</h5>
+                    <p class="price">Rs 5,499</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../amethyst gem ring.webp" class="card-img-top jewelery-img" alt="amethyst gem ring">
+                    <h5 class="card-title">Amethyst Gem Ring</h5>
+                    <p class="price">Rs 3,200</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../crystal drop earring.webp" class="card-img-top jewelery-img"
+                        alt="crystal drop earrings">
+                    <h5 class="card-title">Crystal Drop Earrings</h5>
+                    <p class="price">Rs 2,799</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../rose quartz bracelets.jpg" class="card-img-top jewelery-img"
+                        alt="rose quartz bracelets">
+                    <h5 class="card-title">Rose Quartz Bracelets</h5>
+                    <p class="price">Rs 1,999</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../crystal bead chokker.png" class="card-img-top jewelery-img" alt="crystal bead choker">
+                    <h5 class="card-title">Crystal Bead Choker</h5>
+                    <p class="price">Rs 2,499</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../blue saphhire ring.jfif" class="card-img-top jewelery-img" alt="blue sapphire ring">
+                    <h5 class="card-title">Blue Sapphir Ring</h5>
+                    <p class="price">Rs 4,800</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../pearl crystal necklace.avif" class="card-img-top jewelery-img"
+                        alt="pearl crystal necklace">
+                    <h5 class="card-title">Pearl Crystal Necklace</h5>
+                    <p class="price">Rs 6,999</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../diamond stud earring.jpg" class="card-img-top jewelery-img"
+                        alt="diamond stud earrings">
+                    <h5 class="card-title">Diamond Stud Earring</h5>
+                    <p class="price">Rs 7,200</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+            <!-- Card 9 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../turquoise ring.jpg" class="card-img-top jewelery-img" alt="turquoise ring">
+                    <h5 class="card-title">Turquoise Ring</h5>
+                    <p class="price">Rs 2,50</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+            <!-- Card 10 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../emerald crystal pendant.webp" class="card-img-top jewelery-img"
+                        alt="emerald crystal pendant">
+                    <h5 class="card-title">Emerald Crystal Pendant</h5>
+                    <p class="price">Rs 3,400</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+            <!-- Card 11 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../ruby crystal bracelete.webp" class="card-img-top jewelery-img"
+                        alt="ruby crystal Bracelet">
+                    <h5 class="card-title">Ruby Crystal Bracelet</h5>
+                    <p class="price">Rs 3,999</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+            <!-- Card 12 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../black onyx ring.webp" class="card-img-top jewelery-img" alt="black onyx ring">
+                    <h5 class="card-title">Black Onyx Ring</h5>
+                    <p class="price">Rs 1,950</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+            <!-- Card 13 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../topaz stud earrings.webp" class="card-img-top jewelery-img" alt="topaz stud earrings">
+                    <h5 class="card-title">Topaz Stud Earrings</h5>
+                    <p class="price">Rs 2,350</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+            <!-- Card 14 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../garnet pendant set.jfif" class="card-img-top jewelery-img" alt="garnet pandent set">
+                    <h5 class="card-title">Garnet Pendant Set</h5>
+                    <p class="price">Rs 4,100</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+            <!-- Card 15 -->
+            <div class="col-md-4 col-lg-3">
+                <div class="card jewelery-card">
+                    <img src="../luxuary crystal brooch.jpg" class="card-img-top jewelery-img"
+                        alt="Luxuary crystal Brooch">
+                    <h5 class="card-title">Luxuary Crystal Brooch</h5>
+                    <p class="price">Rs 3,600</p>
+                    <a href="#" class="btn btn-outline-primary btn-custom">Details</a>
+                    <a href="#" class="btn btn-primary btn-custom">Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <section class="crystal-benefits">
+            <div class="style">
+                <h2>Benefits Of Crystal Jewellery</h2>
+                <p>Discover how wearing crystal jewellery can enhance your energy, mood, and well-being.</p>
+            </div>
+            <div class="style">
+                <h2>Energy Boost</h2>
+                <p>Crystals like quartz and citrine are believed to help increase vitality and motivation.</p>
+            </div>
+            <div class="style">
+                <h2>Stress Relief</h2>
+                <p>Amethyst and rose quartz are popular for promoting calmness and reducing anxiety.</p>
+            </div>
+            <div class="style">
+                <h2>Spiritual Growth</h2>
+                <p>Crystals aid in meditation, intutition, and aligning your chakras for spiritual wellness.</p>
+            </div>
+        </section>
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-links">
+                <div>
+                    <h5>Customer service</h5>
+                    <ul>
+                        <li>Shipping</li>
+                        <li>Exchanges & Returns</li>
+                        <li>Contact Us</li>
+                        <li>FAQ</li>
+                        <li>Gift Certificates</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>About Us</h5>
+                    <ul>
+                        <li>Our Story</li>
+                        <li>Environmental Impact</li>
+                        <li>Reviews</li>
+                        <li>Blog</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Resources</h5>
+                    <ul>
+                        <li>Rewards Points</li>
+                        <li>Affiliate Program</li>
+                        <li>Charging Crystals</li>
+                        <li>Trigonics Info</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Privacy</h5>
+                    <ul>
+                        <li>Cookie Policy</li>
+                        <li>DASR</li>
+                        <li>Do Not Sell</li>
+                        <li>Blog</li>
+                    </ul>
+                </div>
+            </div>
+            <p>&copy;2025 Exquisite Crystals. All rights reserved.</p>
+        </footer>
+        </section>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
